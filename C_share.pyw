@@ -334,9 +334,9 @@ class App:
             if self.server_client.server:
                 self.server_client.Close_server()
             self.server_client =Client(self.username, self.Message_func, self.File_func, self.Users_func)
-            if self.address_detail != '':
+            if self.address_detail.get() != '':
                 self.server_client.ip = self.address_detail.get()
-                
+
             self.server_client.Client_connect()
             self.status= self.server_client.status
             self.user.Client()  
