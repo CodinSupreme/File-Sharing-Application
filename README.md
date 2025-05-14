@@ -10,7 +10,7 @@ While running click on the "update" button to change 'username' and 'path' to th
 # Connecting with another Computer
 Click the 'Hotspot' button to host.
 
-Enter IP address of the host shown at the status bar e.g '192.168.1.1' at the Entry below the username
+Enter IP address of the host shown at the status bar e.g '192.168.1.1' at the Entry below the username.
 Click on the 'WIFI' button to connect to the host.
 
 # Selecting and Sharing Files
