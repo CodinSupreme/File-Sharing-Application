@@ -334,7 +334,9 @@ class App:
             if self.server_client.server:
                 self.server_client.Close_server()
             self.server_client =Client(self.username, self.Message_func, self.File_func, self.Users_func)
-
+            if self.address_detail != '':
+                self.server_client.ip = self.address_detail.get()
+                
             self.server_client.Client_connect()
             self.status= self.server_client.status
             self.user.Client()  
@@ -378,6 +380,9 @@ class App:
 
         self.Update_details_btn = customtkinter.CTkButton(self.user_detail, text="Update", command=self.Detail_update_window)
         self.Update_details_btn.grid(row=1, column=1, sticky=NE)
+
+        self.address_detail = customtkinter.CTkEntry(self.window, width=200, placeholder_text="Enter Host's IP e.g '192.168.1.1'")
+        self.address_detail.grid(row=1, column=1, sticky=SW)
 
         self.hotspot=customtkinter.CTkButton(self.user_frame, text="", image=Resize_image(f"{BASE_DIR}\icons\hotspot2.png"), fg_color=self.enabled_color, command=lambda:self.Wireless('host'), width=50, height=50)
         self.hotspot.grid(row=1, column=2, sticky=E)
