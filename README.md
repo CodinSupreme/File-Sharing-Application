@@ -1,6 +1,10 @@
 # File-Sharing-Application
 It contains a program that will enable sharing files from one computer to another
 
+# Requirements
+* customtkinter
+* pillow (PIL)
+  
 # Instructions
 In order to run the application without the need of installing libraries Click on the C_share.pyw
 
